@@ -1,11 +1,12 @@
-const VehicleModule = require("./vehicleBaseClass")
+const { Vehicle } = require("./vehicleBaseClass");
 
-let v = new VehicleModule.Vehicle("Mercury", "Sedan", "1965", "color", "mileage");
+let v = new Vehicle("Mercury", "Sedan", "1965", "color", "mileage");
 console.log(v.make)
 
 
-class Car extends VehicleModule {
+class Car extends Vehicle {
     constructor(make, model, year, color, mileage) {
+        super(make, model, year, color, mileage)
         this.make = make;
         this.model = model;
         this.year = year;
